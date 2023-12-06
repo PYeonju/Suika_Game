@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5110883907354012765}
   - component: {fileID: 7092699829590095620}
   - component: {fileID: 4321537950997022392}
+  - component: {fileID: 7480898571590662969}
   - component: {fileID: 2618242608153728670}
   m_Layer: 0
   m_Name: Dongle
@@ -19,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3161641060862003873
 Transform:
   m_ObjectHideFlags: 0
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 833128437154124809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.9, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -146,9 +147,30 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.05, y: 0.09}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.15
+--- !u!95 &7480898571590662969
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833128437154124809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 815d56959bd32774e8866b1feaf8f406, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2618242608153728670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,4 +183,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7663d9846441a1479b6d3903981d96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
   isDrag: 0
