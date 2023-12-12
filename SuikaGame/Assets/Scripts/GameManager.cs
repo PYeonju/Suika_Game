@@ -10,7 +10,20 @@ public class GameManager : MonoBehaviour
     public GameObject effectPrefab;
     public Transform effectGroup;
 
+    public AudioSource bgmPlayer;
+    // 인스펙터창에서 직접 할당할 수 있어서 크기를 지정하지 않는다.
+    public AudioSource[] sfxPlayer;
+    public AudioClip[] sfxClip;
+    public enum Sfx
+    {
+        Attack, LevelUp, Next, Button, GameOver
+    };
+
+    int sfxCursor;
+
+    public int score;
     public int maxLevel;
+    public bool isOver;
 
     private void Awake()
     {
@@ -20,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        bgmPlayer.Play();
         NextDongle();
     }
 
@@ -41,18 +55,23 @@ public class GameManager : MonoBehaviour
 
     void NextDongle()
     {
+        if (isOver)
+            return;
+
         Dongle newDongle = GetDongle();
         lastDongle = newDongle;
         lastDongle.gameManager = this;
         lastDongle.level = Random.Range(0, maxLevel);
         // 애니메이션 재생을 위해 활성화 시켜야한다.
         lastDongle.gameObject.SetActive(true);
+
+        SfxPlay(Sfx.Next);
         StartCoroutine(WaitNext());
     }
 
     IEnumerator WaitNext()
     {
-        while(lastDongle != null)
+        while (lastDongle != null)
         {
             yield return null;
         }
@@ -62,7 +81,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
 
         NextDongle();
-    }    
+    }
 
     public void TouchDown()
     {
@@ -77,5 +96,59 @@ public class GameManager : MonoBehaviour
             return;
         lastDongle.Drop();
         lastDongle = null;
+    }
+
+    public void SfxPlay(Sfx type)
+    {
+        switch (type)
+        {
+            case Sfx.Attack:
+                sfxPlayer[sfxCursor].clip = sfxClip[0];
+                break;
+            case Sfx.LevelUp:
+                sfxPlayer[sfxCursor].clip = sfxClip[Random.Range(1, 4)];
+                break;
+            case Sfx.Next:
+                sfxPlayer[sfxCursor].clip = sfxClip[4];
+                break;
+            case Sfx.Button:
+                sfxPlayer[sfxCursor].clip = sfxClip[5];
+                break;
+            case Sfx.GameOver:
+                sfxPlayer[sfxCursor].clip = sfxClip[6];
+                break;
+        }
+        sfxPlayer[sfxCursor].Play();
+        sfxCursor = (sfxCursor + 1) % sfxPlayer.Length;
+    }
+
+    public void GameOver()
+    {
+        if (isOver)
+            return;
+        isOver = true;
+
+        StartCoroutine("GameOverRoutine");
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        Dongle[] dongles = GameObject.FindObjectsOfType<Dongle>();
+
+        for(int i=0; i<dongles.Length; i++)
+        {
+            dongles[i].rigidbody.simulated = false;
+        }
+
+        for (int i = 0; i < dongles.Length; i++)
+        {
+            // 절대 나올수 없는 값으로 보내버림
+            dongles[i].Hide(Vector3.up * 100);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        SfxPlay(Sfx.GameOver);
     }
 }

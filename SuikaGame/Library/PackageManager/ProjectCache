@@ -13,14 +13,14 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638373520013237874
-    m_Hash: 299477693
+      ticks: 638378015725748919
+    m_Hash: 1677593207
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: "C:/Users/pomet/Desktop/\uC720\uB2C8\uD2F0_\uD504\uB85C\uC81D\uD2B8/\uC218\uBC15\uAC8C\uC784/Suika_Game/SuikaGame/Packages"
-m_EditorVersion: 2022.3.14f1 (eff2de9070d8)
+m_EditorVersion: 2022.3.15f1 (b58023a2b463)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.2.0
   testable: 0
@@ -227,7 +227,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -341,9 +341,11 @@ m_ResolvedPackages:
     - 3.0.24
     - 3.0.25
     - 3.0.26
+    - 3.0.27
     compatible:
     - 3.0.26
-    recommended: 3.0.26
+    - 3.0.27
+    recommended: 3.0.27
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -3202,6 +3204,7 @@ m_ResolvedPackages:
     - 7.0.10
     - 7.0.11
     - 7.0.12
+    - 7.0.13
     - 8.0.0-pre.3
     - 8.0.0-pre.4
     - 8.0.0
@@ -3256,7 +3259,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -3454,6 +3457,7 @@ m_ResolvedPackages:
     - 6.0.5
     - 6.0.6
     - 6.0.7
+    - 6.0.8
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
@@ -3465,13 +3469,15 @@ m_ResolvedPackages:
     - 8.0.0
     - 8.0.1
     - 8.0.2
+    - 8.0.3
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
     - 9.0.1
     compatible:
     - 8.0.2
-    recommended: 8.0.2
+    - 8.0.3
+    recommended: 8.0.3
     deprecated: []
   dependencies:
   - name: com.unity.2d.animation
@@ -3500,7 +3506,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -3728,7 +3734,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   - name: com.unity.modules.physics2d
     version: 1.0.0
   keywords:
@@ -4025,7 +4031,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   keywords:
   - 2d
   - Aseprite
@@ -4114,6 +4120,7 @@ m_ResolvedPackages:
     - 6.0.4
     - 6.0.5
     - 6.0.6
+    - 6.0.7
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
@@ -4124,6 +4131,7 @@ m_ResolvedPackages:
     - 8.0.0-pre.2
     - 8.0.0
     - 8.0.1
+    - 8.0.2
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
@@ -4131,7 +4139,8 @@ m_ResolvedPackages:
     - 9.0.2
     compatible:
     - 8.0.1
-    recommended: 8.0.1
+    - 8.0.2
+    recommended: 8.0.2
     deprecated: []
   dependencies:
   - name: com.unity.2d.sprite
@@ -4160,7 +4169,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   keywords:
   - 2d
   registry:
@@ -4373,7 +4382,7 @@ m_ResolvedPackages:
     version: 1.1.31
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.10
+    version: 1.8.11
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.test-framework
@@ -4414,12 +4423,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.burst@1.8.10
+- packageId: com.unity.burst@1.8.11
   testable: 0
   isDirectDependency: 0
-  version: 1.8.10
+  version: 1.8.11
   source: 1
-  resolvedPath: "C:\\Users\\pomet\\Desktop\\\uC720\uB2C8\uD2F0_\uD504\uB85C\uC81D\uD2B8\\\uC218\uBC15\uAC8C\uC784\\Suika_Game\\SuikaGame\\Library\\PackageCache\\com.unity.burst@1.8.10"
+  resolvedPath: "C:\\Users\\pomet\\Desktop\\\uC720\uB2C8\uD2F0_\uD504\uB85C\uC81D\uD2B8\\\uC218\uBC15\uAC8C\uC784\\Suika_Game\\SuikaGame\\Library\\PackageCache\\com.unity.burst@1.8.11"
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -4562,7 +4571,6 @@ m_ResolvedPackages:
     - 1.8.10
     - 1.8.11
     compatible:
-    - 1.8.10
     - 1.8.11
     recommended: 1.8.11
     deprecated: []
@@ -4583,16 +4591,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638350315750000000
+  datePublishedTicks: 638360965820000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: git@github.cds.internal.unity3d.com:unity/burst
-    revision: 5c15eb0286bb61ca0ab006d4db90460d7304c8f3
+    revision: 1d80ef69a5caadb47bb90e69e6fc822e3a334bd3
     path: 
   unityLifecycle:
-    version: 1.8.10
+    version: 1.8.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
